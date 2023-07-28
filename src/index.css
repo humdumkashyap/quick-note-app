@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Lao:wght@500&family=Rubik&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-family: "Noto Serif Lao", serif;
+  font-family: "Rubik", sans-serif;
+}
+
+.dark-mode h1 {
+  color: #fff;
+}
+
+.container {
+  max-width: 970px;
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.note-list {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.note {
+  background-color: #fef68a;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 170px;
+  border-radius: 10px;
+  white-space: pre-wrap;
+  box-shadow: 4px 3px 10px #ddd;
+  border-left: 5px solid #dedb25;
+  transition: all 0.4s ease;
+}
+
+.note:hover {
+  box-shadow: none;
+}
+
+.note-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.note.new {
+  background-color: #67d7cc;
+  border: none;
+}
+
+textarea {
+  border: none;
+  outline: none;
+  background-color: #67d7cc;
+  resize: none;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.save-btn {
+  border: none;
+  border-radius: 10px;
+  padding: 0.3rem;
+  background-color: #e1e1e1;
+}
+
+.save-btn:hover {
+  cursor: pointer;
+  background-color: #97ece3;
+}
+
+.delete-btn {
+  font-size: 1.5rem;
+}
+
+.delete-btn:hover,
+.edit-btn:hover {
+  cursor: pointer;
+}
+
+.edit-btn {
+  border: none;
+  padding: 0.3rem;
+  border-radius: 10px;
+}
+
+.search {
+  background-color: rgba(233, 233, 233);
+  display: flex;
+  align-items: center;
+  padding: 0.3rem;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.search input {
+  border: none;
+  background: none;
+  width: 100%;
+}
+
+.search-icon {
+  font-size: 1.5rem;
+}
+
+.search input:focus {
+  outline: none;
+}
+
+.header {
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header button {
+  border: none;
+  padding: 0.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.flashmesage {
+  width: 200px;
+  background: #ddd;
+  color: green;
+  font-weight: bold;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 10px;
+  transform: translateY(1200%);
+  transition: 0.4s ease-in-out;
+  position: absolute;
+  bottom: 1%;
+  right: 0;
+}
+
+.active {
+  transform: translateY(0%);
+}
+
+.theme-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: #fff;
+  border: 2px solid #ddd;
+  padding: 0.4rem;
+  border-radius: 0.3rem;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.theme {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: red;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+  border: 2px dotted #ddd;
+}
+
+.theme:hover {
+  transform: scale(1.5);
+}
+
+.dark-mode-btn {
+  width: 50px;
+}
+
+.moon-icon,
+.sun-icon {
+  font-size: 1.2rem;
+}
+
+.sun-icon {
+  animation: rotate 5s linear infinite;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
